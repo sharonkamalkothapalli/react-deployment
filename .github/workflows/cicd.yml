@@ -25,6 +25,6 @@ jobs:
       - name: Pull image from docker Hub
         run: docker pull sharonkamalk/reactcashmonkey:latest
       - name: Delete old container
-        run: docker em -f reactConatiner
+        run: docker rm -f reactConatiner
       - name: Run docker container
         run: docker run -d -p 3000:80 --name reactContainer sharonkamalk/reactcashmonkey
